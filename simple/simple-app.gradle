@@ -1,0 +1,26 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+
+dependencies {
+	testCompile 'junit:junit:4.12'
+}
+
+
+mainClassName = 'com.github.cseppento.gradle.evosuite.testprojects.simple.SimpleApp'
+
+run {
+    standardInput = System.in
+}
+
+task wrapper(type: Wrapper) { 
+    gradleVersion = '4.10'
+}
+
+jacocoTestReport {
+    group="Reporting"
+    reports {
+	xml.enabled true
+	csv.enabled false
+	html.enabled true
+    }
+}

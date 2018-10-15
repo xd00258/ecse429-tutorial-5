@@ -1,0 +1,28 @@
+plugins {
+	id 'org.sonarqube' version '2.6'
+}
+apply plugin: 'org.sonarqube'
+
+allprojects {
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+
+    project.group = 'com.github.cseppento.gradle.evosuite.test-projects'
+    project.version = 'TEST'
+
+    tasks.eclipse.dependsOn tasks.cleanEclipse
+    tasks.idea.dependsOn tasks.cleanIdea
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'application'
+
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    apply from: "${project.name}-deps.gradle"
+    apply from: "${project.name}-app.gradle"
+}

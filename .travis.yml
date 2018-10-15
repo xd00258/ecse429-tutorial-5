@@ -1,0 +1,13 @@
+sudo: false
+language: java
+
+script:
+  - gradle build
+  - ./gradlew sonarqube -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=ecse429-fall2018 -Dsonar.login=${SONAR_TOKEN} -Dsonar.projectKey=ecse429-tutorial-05-GITHUB_USERNAME -Dsonar.projectName=ecse429-tutorial-05-GITHUB_USERNAME
+
+cache:
+  directories:
+    - '$HOME/.sonar/cache'
+    - '$HOME/.gradle'
+    - '.gradle'
+

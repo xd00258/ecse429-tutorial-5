@@ -1,0 +1,9 @@
+**/build/
+.gradle
+*.css
+*.html
+*.xml
+*.js
+*.csv 
+*.gif
+
