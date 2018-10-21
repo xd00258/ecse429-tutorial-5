@@ -15,7 +15,7 @@ public class SimpleObjectSutTest {
         sut.guessDivisor(1);
         sut.guessDivisor(2);
         sut.guessDivisor(5);
-
+//hi
         assertEquals(100, sut.getValue());
         assertArrayEquals(new Object[]{1L, 2L, 5L}, sut.getDivisors().toArray());
     }
