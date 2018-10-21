@@ -1,0 +1,30 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "simple",
+                "projectName": "simple",
+                "workingDirectory": "/Users/VictorVuong/GitHub/ecse429-tutorial-5/simple",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "simple",
+                "projectName": "simple",
+                "workingDirectory": "/Users/VictorVuong/GitHub/ecse429-tutorial-5/simple",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}
